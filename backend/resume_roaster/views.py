@@ -5,6 +5,8 @@ from rest_framework.decorators import api_view, parser_classes
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.response import Response
 from groq import Groq
+from dotenv import load_dotenv
+load_dotenv()  
 
 def extract_text_from_pdf(file) -> str:
     try:
@@ -151,7 +153,7 @@ Respond ONLY in this exact JSON format, no markdown, no extra text:
     # ── 8. Call Groq ───────────────────────────────────────────────────────────
     try:
         response = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.1-8b-instant",
             messages=[{"role": "user", "content": prompt}],
             max_tokens=800,
             temperature=0.3,

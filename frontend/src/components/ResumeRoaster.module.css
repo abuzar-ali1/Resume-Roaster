@@ -1,0 +1,648 @@
+/* ResumeRoaster.module.css */
+
+/* ── Section ───────────────────────────────────────────────────────────────── */
+.section {
+  position: relative;
+  padding: 96px 16px;
+  background: #FAFAFA;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────────── */
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 16px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #EF4444;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+.badgeIcon {
+  width: 13px;
+  height: 13px;
+}
+
+.title {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  color: #0C1526;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.titleAccent {
+  color: #0891B2;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #6B7280;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ── Card ───────────────────────────────────────────────────────────────────── */
+.card {
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.04), 0 10px 40px rgba(0,0,0,0.06);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  background: #F9FAFB;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.cardHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.iconBox {
+  width: 36px;
+  height: 36px;
+  background: #EF4444;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
+}
+
+.iconBoxIcon {
+  width: 18px;
+  height: 18px;
+  color: #ffffff;
+}
+
+.cardTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0C1526;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+
+.cardSub {
+  font-size: 10px;
+  font-weight: 500;
+  color: #9CA3AF;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.engineBadge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.engineDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.cardBody {
+  padding: 36px 28px;
+}
+
+/* ── Drop Zone ───────────────────────────────────────────────────────────────── */
+.dropzone {
+  border: 2px dashed #E5E7EB;
+  border-radius: 16px;
+  padding: 48px 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #FAFAFA;
+  margin-bottom: 20px;
+}
+
+.dropzone:hover {
+  border-color: #0891B2;
+  background: #F0F9FF;
+}
+
+.dropzoneDragging {
+  border-color: #0891B2;
+  background: #F0F9FF;
+  transform: scale(1.01);
+}
+
+.dropzoneHasFile {
+  border-style: solid;
+  border-color: #10B981;
+  background: #F0FDF4;
+  padding: 20px 24px;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.dropContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.uploadIconWrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: #EFF6FF;
+  border: 1px solid #DBEAFE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploadIcon {
+  width: 24px;
+  height: 24px;
+  color: #0891B2;
+}
+
+.dropTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0C1526;
+  letter-spacing: -0.01em;
+}
+
+.dropSub {
+  font-size: 13px;
+  color: #9CA3AF;
+}
+
+.fileSelected {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.fileIconWrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fileIcon {
+  width: 20px;
+  height: 20px;
+  color: #10B981;
+}
+
+.fileName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0C1526;
+  margin-bottom: 3px;
+}
+
+.fileSize {
+  font-size: 12px;
+  color: #10B981;
+  font-weight: 500;
+}
+
+.removeFile {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9CA3AF;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+}
+
+.removeFile:hover {
+  color: #EF4444;
+}
+
+/* ── Error ───────────────────────────────────────────────────────────────────── */
+.errorBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: 12px;
+  font-size: 13px;
+  color: #DC2626;
+  margin-bottom: 20px;
+}
+
+.errorBox p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.errorBoxWarning {
+  background: #FFFBEB;
+  border-color: #FDE68A;
+  color: #D97706;
+}
+
+/* ── Analyze Button ──────────────────────────────────────────────────────────── */
+.analyzeBtn {
+  width: 100%;
+  padding: 15px 24px;
+  background: #0C1526;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 14px rgba(12, 21, 38, 0.2);
+}
+
+.analyzeBtn:hover:not(:disabled) {
+  background: #1a2942;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(12, 21, 38, 0.25);
+}
+
+.analyzeBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.disclaimer {
+  text-align: center;
+  font-size: 11px;
+  color: #9CA3AF;
+  margin: 0;
+}
+
+/* ── Results ─────────────────────────────────────────────────────────────────── */
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Roast Box */
+.roastBox {
+  padding: 20px 24px;
+  background: #0C1526;
+  border-radius: 16px;
+  color: #ffffff;
+}
+
+.roastLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #EF4444;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+}
+
+.roastText {
+  font-size: 16px;
+  font-style: italic;
+  color: #F1F5F9;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Scores Row */
+.scoresRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 140px;
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .scoresRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.scoreCard {
+  padding: 18px;
+  background: #F9FAFB;
+  border: 1px solid #F3F4F6;
+  border-radius: 14px;
+}
+
+.scoreLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.scoreBarWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.scoreBarBg {
+  flex: 1;
+  height: 6px;
+  background: #E5E7EB;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.scoreBarFill {
+  height: 100%;
+  border-radius: 100px;
+}
+
+.scoreNum {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+.scoreOf {
+  font-size: 11px;
+  color: #D1D5DB;
+  font-weight: 500;
+}
+
+.scoreVerdict {
+  font-size: 11px;
+  color: #6B7280;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Hiring Card */
+.hiringCard {
+  padding: 18px;
+  background: #F9FAFB;
+  border: 1px solid #F3F4F6;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hiringValue {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 8px 0 4px;
+}
+
+.hiringRole {
+  font-size: 11px;
+  color: #9CA3AF;
+  margin: 0;
+}
+
+/* Feedback Grid */
+.feedbackGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 580px) {
+  .feedbackGrid { grid-template-columns: 1fr; }
+}
+
+.feedbackCard {
+  padding: 20px;
+  background: #F9FAFB;
+  border: 1px solid #F3F4F6;
+  border-radius: 14px;
+}
+
+.feedbackTitle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+
+.greenIcon { color: #10B981; }
+.redIcon   { color: #EF4444; }
+
+.feedbackList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feedbackItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.greenDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10B981;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.redDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #EF4444;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+/* Fixes Card */
+.fixesCard {
+  padding: 20px;
+  background: #F0F9FF;
+  border: 1px solid #BAE6FD;
+  border-radius: 14px;
+}
+
+.fixList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fixItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.fixNum {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #0891B2;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Missing Sections */
+.missingCard {
+  padding: 16px 20px;
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: 14px;
+}
+
+.missingLabel {
+  font-size: 10px;
+  font-weight: 700;
+  color: #D97706;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.missingTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.missingTag {
+  padding: 4px 12px;
+  background: #FEF3C7;
+  border: 1px solid #FDE68A;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #92400E;
+}
+
+/* Reset Button */
+.resetBtn {
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6B7280;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.15s;
+}
+
+.resetBtn:hover {
+  border-color: #0891B2;
+  color: #0891B2;
+  background: #F0F9FF;
+}
