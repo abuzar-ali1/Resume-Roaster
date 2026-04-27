@@ -55,10 +55,13 @@ export function useResumeAnalysis() {
     formData.append("resume", file);
 
     try {
-      const res = await fetch("http://localhost:8000/api/roast-resume/", {
-        method: "POST",
-        body: formData,
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_DJANGO_API_URL}/api/roast-resume/`,
+        {
+          method: "POST",
+          body: formData,
+        },
+      );
 
       if (!res.ok) {
         const errorData = await res.json().catch(() => ({}));
@@ -76,7 +79,9 @@ export function useResumeAnalysis() {
       setResult(data);
     } catch (err: any) {
       setErrorType("network");
-      setError(err.message || "Network error. Check your connection and try again.");
+      setError(
+        err.message || "Network error. Check your connection and try again.",
+      );
     } finally {
       setLoading(false);
     }
