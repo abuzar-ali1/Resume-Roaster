@@ -1,11 +1,9 @@
-/* ResumeRoaster.module.css */
-
-/* ── Section ───────────────────────────────────────────────────────────────── */
 .section {
   position: relative;
-  padding: 96px 16px;
+  padding: 80px 16px;
   background: #FAFAFA;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .container {
@@ -14,10 +12,9 @@
   width: 100%;
 }
 
-/* ── Header ─────────────────────────────────────────────────────────────────── */
 .header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 .badge {
@@ -42,11 +39,11 @@
 }
 
 .title {
-  font-size: clamp(32px, 5vw, 52px);
+  font-size: clamp(28px, 5vw, 48px);
   font-weight: 800;
   color: #0C1526;
   letter-spacing: -0.03em;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 16px;
 }
 
@@ -55,18 +52,17 @@
 }
 
 .subtitle {
-  font-size: 16px;
+  font-size: clamp(14px, 2vw, 16px);
   color: #6B7280;
-  line-height: 1.7;
+  line-height: 1.6;
   max-width: 520px;
   margin: 0 auto;
 }
 
-/* ── Card ───────────────────────────────────────────────────────────────────── */
 .card {
   background: #ffffff;
   border: 1px solid #E5E7EB;
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.04), 0 10px 40px rgba(0,0,0,0.06);
 }
@@ -75,7 +71,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 28px;
+  padding: 16px 24px;
   background: #F9FAFB;
   border-bottom: 1px solid #F3F4F6;
 }
@@ -95,6 +91,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
+  flex-shrink: 0;
 }
 
 .iconBoxIcon {
@@ -108,7 +105,7 @@
   font-weight: 700;
   color: #0C1526;
   line-height: 1;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .cardSub {
@@ -123,7 +120,7 @@
   display: flex;
   align-items: center;
   gap: 7px;
-  padding: 6px 14px;
+  padding: 6px 12px;
   background: #ffffff;
   border: 1px solid #E5E7EB;
   border-radius: 100px;
@@ -133,6 +130,7 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  white-space: nowrap;
 }
 
 .engineDot {
@@ -141,6 +139,7 @@
   border-radius: 50%;
   background: #10B981;
   animation: pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
 }
 
 @keyframes pulse {
@@ -149,14 +148,13 @@
 }
 
 .cardBody {
-  padding: 36px 28px;
+  padding: 32px 24px;
 }
 
-/* ── Drop Zone ───────────────────────────────────────────────────────────────── */
 .dropzone {
   border: 2px dashed #E5E7EB;
   border-radius: 16px;
-  padding: 48px 24px;
+  padding: 40px 20px;
   cursor: pointer;
   transition: all 0.2s ease;
   background: #FAFAFA;
@@ -178,7 +176,7 @@
   border-style: solid;
   border-color: #10B981;
   background: #F0FDF4;
-  padding: 20px 24px;
+  padding: 20px;
 }
 
 .hiddenInput {
@@ -226,6 +224,12 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  width: 100%;
+}
+
+.fileDetails {
+  flex: 1;
+  min-width: 0;
 }
 
 .fileIconWrap {
@@ -251,6 +255,9 @@
   font-weight: 600;
   color: #0C1526;
   margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .fileSize {
@@ -260,12 +267,11 @@
 }
 
 .removeFile {
-  margin-left: auto;
   background: none;
   border: none;
   cursor: pointer;
   color: #9CA3AF;
-  padding: 4px;
+  padding: 8px;
   display: flex;
   align-items: center;
   transition: color 0.15s;
@@ -275,7 +281,6 @@
   color: #EF4444;
 }
 
-/* ── Error ───────────────────────────────────────────────────────────────────── */
 .errorBox {
   display: flex;
   align-items: flex-start;
@@ -300,7 +305,6 @@
   color: #D97706;
 }
 
-/* ── Analyze Button ──────────────────────────────────────────────────────────── */
 .analyzeBtn {
   width: 100%;
   padding: 15px 24px;
@@ -350,16 +354,14 @@
   margin: 0;
 }
 
-/* ── Results ─────────────────────────────────────────────────────────────────── */
 .results {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-/* Roast Box */
 .roastBox {
-  padding: 20px 24px;
+  padding: 20px;
   background: #0C1526;
   border-radius: 16px;
   color: #ffffff;
@@ -378,28 +380,21 @@
 }
 
 .roastText {
-  font-size: 16px;
+  font-size: 15px;
   font-style: italic;
   color: #F1F5F9;
   line-height: 1.6;
   margin: 0;
 }
 
-/* Scores Row */
 .scoresRow {
   display: grid;
-  grid-template-columns: 1fr 1fr 140px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 16px;
 }
 
-@media (max-width: 640px) {
-  .scoresRow {
-    grid-template-columns: 1fr;
-  }
-}
-
 .scoreCard {
-  padding: 18px;
+  padding: 16px;
   background: #F9FAFB;
   border: 1px solid #F3F4F6;
   border-radius: 14px;
@@ -457,9 +452,8 @@
   margin: 0;
 }
 
-/* Hiring Card */
 .hiringCard {
-  padding: 18px;
+  padding: 16px;
   background: #F9FAFB;
   border: 1px solid #F3F4F6;
   border-radius: 14px;
@@ -481,15 +475,10 @@
   margin: 0;
 }
 
-/* Feedback Grid */
 .feedbackGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 16px;
-}
-
-@media (max-width: 580px) {
-  .feedbackGrid { grid-template-columns: 1fr; }
 }
 
 .feedbackCard {
@@ -550,7 +539,6 @@
   flex-shrink: 0;
 }
 
-/* Fixes Card */
 .fixesCard {
   padding: 20px;
   background: #F0F9FF;
@@ -590,7 +578,6 @@
   flex-shrink: 0;
 }
 
-/* Missing Sections */
 .missingCard {
   padding: 16px 20px;
   background: #FFFBEB;
@@ -623,7 +610,6 @@
   color: #92400E;
 }
 
-/* Reset Button */
 .resetBtn {
   width: 100%;
   padding: 14px;
@@ -645,4 +631,27 @@
   border-color: #0891B2;
   color: #0891B2;
   background: #F0F9FF;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 40px 12px;
+  }
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .cardBody {
+    padding: 20px 16px;
+  }
+  .fileSelected {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  .removeFile {
+    margin-left: 0;
+    margin-top: 8px;
+  }
 }
