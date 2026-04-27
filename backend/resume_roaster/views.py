@@ -30,7 +30,6 @@ def extract_text_from_docx(file) -> str:
         raise ValueError(f"Could not read DOCX: {str(e)}")
 
 
-# ── Resume detector ────────────────────────────────────────────────────────────
 def looks_like_resume(text: str) -> bool:
     """
     Quick keyword check — if none of these appear, it's probably not a resume.
@@ -49,7 +48,6 @@ def looks_like_resume(text: str) -> bool:
     return matches >= 4  # needs at least 4 resume-like keywords
 
 
-# ── Main view ─────────────────────────────────────────────────────────────────
 @api_view(['POST'])
 @parser_classes([MultiPartParser, FormParser])
 def roast_resume(request):
@@ -109,7 +107,7 @@ def roast_resume(request):
     # ── 6. Limit text to 3000 chars to avoid token overflow ───────────────────
     resume_text_trimmed = resume_text[:3000]
 
-    # ── 7. Build prompt ────────────────────────────────────────────────────────
+    # ──  prompt
     prompt = f"""
 You are a brutally honest senior software engineer and tech recruiter with 10 years of experience.
 You are reviewing a developer's resume. Be direct, specific, and helpful.
