@@ -28,7 +28,7 @@ DEBUG = True
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "http://127.0.0.1:5173",
+    "https://resume-roaster-two.vercel.app/",
 ]
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'resume-roaster-hn8e.onrender.com , localhost,127.0.0.1').split(',')
