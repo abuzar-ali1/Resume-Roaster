@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { Upload, FileText, Loader2, AlertCircle, XCircle, Zap } from "lucide-react";
+import {
+  Upload,
+  FileText,
+  Loader2,
+  AlertCircle,
+  XCircle,
+  Zap,
+} from "lucide-react";
 import styles from "./ResumeRoaster.module.css";
 import type { ErrorType } from "./types";
 
@@ -9,7 +16,7 @@ interface UploadZoneProps {
   loading: boolean;
   error: string | null;
   errorType: ErrorType;
-  inputRef: React.RefObject<HTMLInputElement>;
+  inputRef: React.RefObject<HTMLInputElement | null>;
   setDragging: (val: boolean) => void;
   onDrop: (e: React.DragEvent) => void;
   onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -84,7 +91,9 @@ export function UploadZone({
               <Upload className={styles.uploadIcon} />
             </div>
             <p className={styles.dropTitle}>Drop your resume here</p>
-            <p className={styles.dropSub}>or click to browse — PDF or DOCX, max 5MB</p>
+            <p className={styles.dropSub}>
+              or click to browse — PDF or DOCX, max 5MB
+            </p>
           </div>
         )}
       </div>
@@ -102,7 +111,11 @@ export function UploadZone({
         </motion.div>
       )}
 
-      <button className={styles.analyzeBtn} onClick={analyze} disabled={!file || loading}>
+      <button
+        className={styles.analyzeBtn}
+        onClick={analyze}
+        disabled={!file || loading}
+      >
         {loading ? (
           <>
             <Loader2 className={styles.spin} size={18} /> Analyzing...

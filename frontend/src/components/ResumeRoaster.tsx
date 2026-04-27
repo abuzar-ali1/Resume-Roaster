@@ -6,7 +6,6 @@ import styles from "./ResumeRoaster.module.css";
 import { useResumeAnalysis } from "./../hooks/useResumeAnalysis";
 import { UploadZone } from "./UploadZone";
 import { AnalysisResult } from "./AnalysisResult";
-// import type { RoastResult, ErrorType } from "./types";
 
 export default function ResumeRoaster() {
   const {
