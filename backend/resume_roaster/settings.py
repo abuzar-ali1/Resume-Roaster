@@ -31,8 +31,16 @@ CORS_ALLOWED_ORIGINS = [
     "https://resume-roaster-two.vercel.app",
 ]
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'resume-roaster-hn8e.onrender.com , localhost,127.0.0.1').split(',')
 
+ALLOWED_HOSTS = [
+    'resume-roaster-hn8e.onrender.com',
+    'localhost',
+    '127.0.0.1',
+]
+
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 CORS_ALLOW_ALL_ORIGINS = True
 # Application definition
